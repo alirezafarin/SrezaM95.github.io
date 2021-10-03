@@ -82,6 +82,12 @@ body {
   height: 500px;
 }
 
+@media (max-width: 450px) {
+  .cover {
+    height: 575px;
+  }
+}
+
 .cover > img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -243,4 +249,50 @@ body {
 
 .height {
   height: 0px;
+}
+
+
+.expandable-image {
+  cursor: pointer;
+}
+
+.dark-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1020;
+}
+
+.dark-overlay img {
+  width: auto;
+  height: auto;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.close-overlay {
+  position: fixed;
+  top: 10px;
+  /* right: 0; */
+  /* left: 0; */
+  /* margin: auto; */
+  right: 20px;
+  z-index: 1021;
+  font-size: 50px;
+  color: hsla(5, 76%, 62%, 0.8);
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .close-overlay {
+    font-size: 35px;
+  }  
 }
